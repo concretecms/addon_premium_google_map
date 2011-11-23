@@ -1,0 +1,12 @@
+2.0.1 - fixed bug where zoom level was not honored if it was set above 17 - now allows up to 21
+
+2.0 - optionally uses google v3 api, optionally show/hide kml link, uses specified zoom level if kml doesn't specify <lookat> parameter
+    - Inserts javascript once in header, not inline
+
+1.1.1 - Fix file error message when editing block, downloading KML file.
+
+1.1 - Fix the file API, version 5.3 now required
+
+1.0.1 - Replace direct json_encode call with a call to the concrete5 JSONHelper, which should ensure that older systems without json_encode can use the gallery block.
+
+1.0 - Initial Release
