@@ -5,11 +5,7 @@ if ($c->isEditMode() && $show_earth) { ?>
 	<div style="border:1px solid #999; background:#eee; color:#999; padding:64px 16px; text-align:center; margin:8px 0px">
 		<?= t('Google Earth Map Placeholder') ?>
 	</div>
-<? }else{ ?>
-	<style>
-	#googleAdvancedMapCanvas<?=$bID?>{ width:<?=($w)?$w:'100%'?>; border:0px none; height:<?=($h)?$h:'400px'?>;}
-	</style>   
-	
+<? }else{ ?> 
 	<? if($show_earth){ ?>
 	<script>
 	google.load("earth","1"); 
@@ -64,7 +60,7 @@ if ($c->isEditMode() && $show_earth) { ?>
 	}
 	</script>
 	<? if( strlen($title)>0){ ?><h3><?=$title?></h3><? } ?>
-		<div id="googleAdvancedMapCanvas<?=$bID?>" class="googleAdvancedMapCanvas"></div>
+		<div id="googleAdvancedMapCanvas<?=$bID?>" class="googleAdvancedMapCanvas" style="width:<?=($w)?$w:'100%'?>; border:0px none; height:<?=($h)?$h:'400px'?>;" ></div>
 	<? if(strlen($kml_file_path) && $kml_link){ ?>
 		<div class="ccm-note"><a href="<?=$this->url('/download_file', $kml_fID)?>" target="_blank">Download KML for Google Earth</a></div>
 	<? } ?>
