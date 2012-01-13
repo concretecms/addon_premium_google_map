@@ -7,6 +7,7 @@ class PremiumGoogleMapBlockController extends BlockController {
 	protected $btTable = 'btGoogleMapPremium';
 	protected $btInterfaceWidth = "400";
 	protected $btInterfaceHeight = "220";
+	protected $btWrapperClass = 'ccm-ui';
 	
 	public $title = "";
 	public $api_key = "";

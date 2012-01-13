@@ -39,6 +39,8 @@ function googleMapInit<?=$bID?>() {
 									
 		<?php } ?>
 
+	return map;
+
 	}catch(e){} 
 }
 </script>
@@ -47,4 +49,11 @@ function googleMapInit<?=$bID?>() {
 <? if(strlen($kml_file_path) && $kml_link){ ?>
 	<div class="ccm-note"><a href="<?=$this->url('/download_file', $kml_fID)?>" target="_blank">Download KML for Google Earth</a></div>
 <? } ?>
-<script type="text/javascript">$(function() {googleMapInit<?=$bID?>();});</script> 
+<script type="text/javascript">
+$(function() {
+	if(typeof(window.ccm_gpMaps) == 'undefined') {
+		window.ccm_gpMaps = new Array();
+	}
+	window.ccm_gpMaps.push(googleMapInit<?=$bID?>());
+});
+</script>

@@ -1,3 +1,6 @@
+2.1 - updated ui for 5.5
+	- made the v3 map object available in the global javascript scope window.ccm_gpMaps
+
 2.0.1 - fixed bug where zoom level was not honored if it was set above 17 - now allows up to 21
 
 2.0 - optionally uses google v3 api, optionally show/hide kml link, uses specified zoom level if kml doesn't specify <lookat> parameter
